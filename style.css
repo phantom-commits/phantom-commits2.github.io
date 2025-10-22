@@ -1,0 +1,92 @@
+body{
+    padding-left: 20px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F9FBFA;
+}
+
+/* Menu burger */
+.burger{
+    width: 30px;
+    height: 25px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.burger div{
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.4s ease;
+}
+
+/* Animation du burger */
+.burger.active div:nth-child(1){
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active div:nth-child(2){
+    opacity: 0;
+}
+.burger.active div:nth-child(3){
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Menu latéral */
+.menu{
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 200px;
+    height: 100%;
+    background: #f8f8f8ef;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    padding-top: 60px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+.menu.active{
+    right: 0;
+}
+
+.menu ul .p {
+    padding: 15px 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.menu ul .p:hover{
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+.main-menu{
+    color: rgb(28, 17, 80);
+    font-weight: bold;
+}
+svg{
+    width: 30px;
+    height: 85px;
+    margin-left: -10px;
+}
+
+section .content{
+    width: 85%;
+    padding: 20px 10px;
+}
+a {
+    text-decoration: none;
+    color: #404040;
+    display: flex;
+    flex-direction: row;
+}
+
+#main_menu{
+    color: rgb(28, 17, 80);
+    font-weight: bold;
+}
